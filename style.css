@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+    font-family: Open Sans;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(83, 180, 83);
+}
+
+.container{
+    background-color: white;
+    width: 30em;
+    margin-top: 2em;
+    border-radius: 1em;
+    padding: 2em;
+}
+
+.searchBox{
+    display: flex;
+}
+
+input{
+    border: none;
+    outline: none;
+    width: 70%;
+    font-size: 1.3em;
+    border-bottom: 2px solid rgb(83, 180, 83);
+    padding: 0.5em;
+}
+
+#searchBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(83, 180, 83);
+    color: white;
+    font-size: 1.3em;
+    padding: 0 1em 0 1em;
+    border-radius: 0.5em;
+    margin-left: 1em;
+    cursor: pointer;
+}
+
+.dish-left-and-right{
+    display: flex;
+    margin-top: 1em;
+}
+
+.dish-left{
+    width: 50%;
+}
+
+.dish-photo{
+    background-color: red;
+    width: 15em;
+    height: 15em;
+}
+
+.dish-right{
+    width: 50%;
+    margin-top: 5em;
+}
+
+.dish-name{
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 2em;
+    padding: 0 1em 0 1em;
+    text-align: center;
+}
+
+.dish-country{
+    display: flex;
+    justify-content: center;
+    font-size: 1em;;
+}
+
+.listAll {
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: 2px solid rgb(83, 180, 83);
+}
+
+.listAll ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em
+}
+
+.listAll li {
+    width: calc(50% - 10px); 
+}
+
+.view-recipe-box{
+    display: flex;
+    justify-content: right;
+    margin-top: 1em;
+}
+
+#viewRecipeBtn{
+    background-color: rgb(83, 180, 83);
+    border: none;
+    cursor: pointer;
+    padding: 0.5em 1em 0.5em 1em;
+    color: white;
+    font-size: 1em;
+    border-radius: 0.5em;
+}
+
+.modal-overlay{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(83, 180, 83);
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+
+.modal-container{
+    background-color: white;
+    width: 30em;
+    max-height:35em;
+    margin-top: 2em;
+    border-radius: 1em;
+    padding: 2em;
+    overflow: auto;
+}
+
+.modal-close-box{
+    display: flex;
+    justify-content: right;
+}
+
+#modalCloseBtn{
+    width: 2em;
+    height: 2em;
+    border-radius: 0.2em;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(83, 180, 83);
+    color: white;
+}
+
+.modal-text{
+    margin-top: 1em;
+}
+
