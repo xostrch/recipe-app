@@ -122,7 +122,6 @@ input{
     background-color: rgb(83, 180, 83);
     display: flex;
     justify-content: center;
-    display: none;
 }
 
 .modal-container{

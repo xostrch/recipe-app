@@ -2,7 +2,8 @@ const url = "https://www.themealdb.com/api/json/v1/1/search.php?s=Big Mac";
 
 const searchBtn = document.getElementById("searchBtn");
 const inputName = document.getElementById("inputMeal");
-const apiContainer = document.getElementById("apiContainer")
+const apiContainer = document.getElementById("apiContainer");
+const bodyElement = document.getElementById("bodyElement");
 
 searchBtn.addEventListener("click",() =>{
     const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${inputName.value}`;
@@ -72,7 +73,36 @@ searchBtn.addEventListener("click",() =>{
             apiContainer.appendChild(viewRecipeBox);
 
             viewRecipeBtn.addEventListener("click",()=>{
-                const modalOverlay
+                const modalOverlay = document.createElement('div');
+                modalOverlay.classList.add('modal-overlay');
+
+                const modalContainer = document.createElement('div');
+                modalContainer.classList.add('modal-container');
+
+                const modalCloseBox = document.createElement('div');
+                modalCloseBox.classList.add('modal-close-box');
+
+                const modalCloseBtn = document.createElement('button');
+                modalCloseBtn.id = "modalCloseBtn";
+                modalCloseBtn.textContent = "x";
+
+                modalCloseBox.appendChild(modalCloseBtn);
+
+                const modalText = document.createElement('div');
+                modalText.classList.add('modal-text');
+                modalText.textContent= meal.strInstructions;
+
+                modalContainer.appendChild(modalCloseBox);
+                modalContainer.appendChild(modalText);
+
+                modalOverlay.appendChild(modalContainer);
+
+                bodyElement.appendChild(modalOverlay);
+
+                modalCloseBtn.addEventListener('click',()=>{
+                    modalOverlay.remove();
+                })
+                
             })
         })
 
